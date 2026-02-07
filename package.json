@@ -1,0 +1,12 @@
+{
+  "name": "big-search",
+  "version": "1.0.0",
+  "description": "Универсальный поисковый браузер",
+  "main": "index.html",
+  "scripts": {
+    "start": "echo 'Откройте index.html в браузере'"
+  },
+  "keywords": ["search", "browser", "google", "yandex"],
+  "author": "Big Search Team",
+  "license": "MIT"
+}

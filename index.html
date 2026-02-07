@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Big Search</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Шапка -->
+        <div class="header">
+            <div class="logo">
+                <i class="fas fa-search"></i>
+                <h1>Big Search</h1>
+            </div>
+            <p class="subtitle">Поиск в один клик</p>
+        </div>
+
+        <!-- Основной контент -->
+        <main class="main-content">
+            <!-- Поисковая строка -->
+            <div class="search-box">
+                <div class="input-group">
+                    <i class="fas fa-search input-icon"></i>
+                    <input 
+                        type="text" 
+                        id="searchInput" 
+                        placeholder="Что ищем?"
+                        autocomplete="off"
+                    >
+                    <button id="clearBtn" class="clear-btn">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+
+                <!-- Выбор поисковой системы -->
+                <div class="engines">
+                    <div class="engine-option active" data-engine="google">
+                        <div class="engine-icon google">
+                            <i class="fab fa-google"></i>
+                        </div>
+                        <span>Google</span>
+                    </div>
+                    <div class="engine-option" data-engine="yandex">
+                        <div class="engine-icon yandex">
+                            <span>Я</span>
+                        </div>
+                        <span>Yandex</span>
+                    </div>
+                    <div class="engine-option" data-engine="bing">
+                        <div class="engine-icon bing">
+                            <i class="fab fa-microsoft"></i>
+                        </div>
+                        <span>Bing</span>
+                    </div>
+                    <div class="engine-option" data-engine="duckduckgo">
+                        <div class="engine-icon duckduckgo">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <span>DuckDuckGo</span>
+                    </div>
+                </div>
+
+                <!-- Кнопка поиска -->
+                <button id="searchBtn" class="search-btn">
+                    <i class="fas fa-search"></i>
+                    Найти
+                </button>
+
+                <!-- Быстрые запросы -->
+                <div class="quick-queries">
+                    <p>Популярное:</p>
+                    <div class="quick-buttons">
+                        <button class="quick-btn" data-query="погода">🌤 Погода</button>
+                        <button class="quick-btn" data-query="новости">📰 Новости</button>
+                        <button class="quick-btn" data-query="курс валют">💵 Курс</button>
+                        <button class="quick-btn" data-query="YouTube">▶ YouTube</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- История поиска -->
+            <div class="history">
+                <div class="history-header">
+                    <h3><i class="fas fa-history"></i> История</h3>
+                    <button id="clearHistoryBtn" class="clear-history">Очистить</button>
+                </div>
+                <div class="history-list" id="historyList">
+                    <!-- История будет здесь -->
+                </div>
+            </div>
+        </main>
+
+        <!-- Подвал -->
+        <footer class="footer">
+            <p>Big Search v1.0</p>
+            <p class="hint">Нажмите Enter для поиска</p>
+        </footer>
+    </div>
+
+    <!-- Уведомления -->
+    <div class="notification" id="notification"></div>
+
+    <!-- Подключаем скрипты -->
+    <script src="script.js"></script>
+</body>
+</html>
